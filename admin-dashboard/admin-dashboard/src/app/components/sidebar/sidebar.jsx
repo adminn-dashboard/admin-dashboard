@@ -7,6 +7,7 @@ import { IoStatsChartSharp } from "react-icons/io5";
 import { MdOndemandVideo } from "react-icons/md";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { Input } from 'postcss';
+
 function classNames(...classes) {
 return classes.filter(Boolean).join('')
 }
@@ -30,61 +31,61 @@ console.log(segment)
     },
     {
         name : "Shorts",
-        href : "shorts",
+        href : "/shorts",
         icon : <MdOndemandVideo />,
         current :  `/${segment}` === "/shorts" ? true : false
     },
     {
         name : "Events",
-        href : "events",
+        href : "/events",
         icon : < MdOutlineEventAvailable />,
         current :  `/${segment}` === "/events" ? true : false
     },
     {
         name : "Photos",
-        href : "photos",
+        href : "/photos",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/photos" ? true : false
     },
     {
         name : "movies",
-        href : "movies",
+        href : "/movies",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/movies" ? true : false
     },
     {
         name : "Profile",
-        href : "profile",
+        href : "/profile",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/profile" ? true : false
     },
     {
         name : "Location",
-        href : "location",
+        href : "/location",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/location" ? true : false
     },
     {
         name : "Offer",
-        href : "offer",
+        href : "/offer",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/offer" ? true : false
     },
     {
         name : "Partners",
-        href : "partners",
+        href : "/partners",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/partners" ? true : false
     },
     {
         name : "Jobs",
-        href : "jobs",
+        href : "/jobs",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/jobs" ? true : false
     },
     {
         name : "Order",
-        href : "order",
+        href : "/order",
         icon : <MdOutlineDashboard />,
         current :  `/${segment}` === "/order" ? true : false
     },
@@ -109,7 +110,7 @@ console.log(segment)
 </div>
 </div>
       </div>
-     
+
     </div>
   )
 }

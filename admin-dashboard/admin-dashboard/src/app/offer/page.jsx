@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const page = () => {
+const pages = () => {
   return (
-    <div>page</div>
+    <div>offer</div>
   )
 }
 
+export default pages
