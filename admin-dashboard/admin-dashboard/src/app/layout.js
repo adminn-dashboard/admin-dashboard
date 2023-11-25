@@ -9,9 +9,9 @@ export default function RootLayout({ children }) {
 console.log( `/${segment}` )
   return (
     <html lang="en">
-      <body  className="">
-{`/${segment}` === "/null"||"/forgot-password" ? "" : <Sidebar/>}
-<div className=" flex items-center justify-center">
+      <body  className="place-content-center">
+      {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <Sidebar/>}
+<div className=" flex items-center justify-center place-items-center">
   {children}
 </div>
         </body>

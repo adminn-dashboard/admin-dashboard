@@ -9,11 +9,11 @@ const page = () => {
  }
 
   return (
-    <div className="w-[100%]  bg-black h-[100%]">
+    <div className="w-[100%]  bg-black h-3xl">
 <div >
     {page === 1 ?
     <div >
-       <div className=" flex flex-col items-center justify-center mt-[8rem] gap-[2rem] pb-[12rem]">
+       <div className=" flex flex-col items-center justify-center mt-[8rem] gap-[2rem] ">
 <h2 className="text-[40px] font-bold text-[#938BE7]  ">FAME UP</h2>
 <div className="flex flex-col items-center justify-center border-[1px] border-gray-400 rounded-md">
 <div className="flex flex-col  p-[2rem] gap-[2rem]" >
@@ -36,7 +36,7 @@ const page = () => {
 
     {page === 2 ?
     <div>
-         <div className=" flex flex-col items-center justify-center mt-[7rem] gap-[2rem] pb-[12rem]">
+         <div className=" flex flex-col items-center justify-center mt-[7rem] gap-[2rem] ">
 <h2 className="text-[40px] font-bold text-[#938BE7]  ">FAME UP</h2>
 <div className="flex flex-col items-center justify-center border-[1px] border-gray-400 rounded-md">
 <div className="flex flex-col  p-[2rem] gap-[2rem]" >
@@ -63,7 +63,7 @@ const page = () => {
 
     {page === 3 ?
     <div>
-              <div className=" flex flex-col items-center justify-center mt-[8rem] gap-[2rem] pb-[18rem]">
+              <div className=" flex flex-col items-center justify-center mt-[8rem] gap-[2rem] ]">
 <div className="flex flex-col items-center justify-center  ">
 <div className="flex flex-col  p-[2rem] gap-[2rem]" >
 <div className="flex flex-col items-center justify-center gap-[1rem]">
