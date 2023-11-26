@@ -11,7 +11,7 @@ console.log( `/${segment}` )
     <html lang="en">
       <body  className="flex mx-auto w-full">
       {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <Sidebar/>}
-<div className=" flex pt-[7rem] justify-center  w-full">
+<div className=" flex pt-[5rem] pl-[4rem]  w-full">
   {children}
 </div>
 
