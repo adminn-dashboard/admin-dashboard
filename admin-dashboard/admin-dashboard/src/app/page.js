@@ -5,7 +5,7 @@ import { Input } from 'postcss'
 import { FaRegEye } from "react-icons/fa";
 export default function Home() {
   return (
-    <main className="w-[100%] bg-black h-[100%]  " >
+    <main className="w-full bg-black h-[100%]  " >
      <div className=" flex flex-col items-center justify-center mt-[7rem] gap-[2rem] pb-[5rem]">
 <h2 className="text-[40px] font-bold text-[#938BE7]  ">WELCOME TO FAME UP</h2>
 <div className="flex flex-col items-center justify-center border-[1px] border-gray-400 rounded-md">

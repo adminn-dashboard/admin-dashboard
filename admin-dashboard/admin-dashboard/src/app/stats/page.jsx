@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="">stats</div>
+    <div className="pt-[3rem] pl-[4rem]">
+
+      stats</div>
   )
 }
 
