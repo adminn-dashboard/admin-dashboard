@@ -13,7 +13,7 @@ return classes.filter(Boolean).join('')
 }
 
 
-const Sidebar = () => {
+const Sidebar = ({children}) => {
   const segment = useSelectedLayoutSegment()
 console.log(segment)
    const sidebaroptions =[
