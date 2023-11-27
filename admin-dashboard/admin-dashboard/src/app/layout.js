@@ -1,3 +1,4 @@
+
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from './components/sidebar/sidebar'
@@ -10,15 +11,15 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
-<div className="flex flex-row w-full mx-auto">
-<Sidebar />
-  {children}
-</div>
-        </body>
-
+        <div className='bgset flex flex-row w-full mx-auto'>
+          <Sidebar />
+          {children}
+        </div>
+      </body>
     </html>
-  )
+  );
 }
