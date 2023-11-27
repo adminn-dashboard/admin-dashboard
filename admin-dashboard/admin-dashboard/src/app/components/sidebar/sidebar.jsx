@@ -128,7 +128,7 @@ console.log(segment)
 </div>
 </div>
       </div>
-
+     
     </div>
   )
 }
