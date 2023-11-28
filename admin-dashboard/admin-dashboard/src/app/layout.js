@@ -10,11 +10,13 @@ export default function RootLayout({ children }) {
 console.log( `/${segment}` )
   return (
     <html lang="en">
-      <body  className="flex mx-auto w-full">
-      {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <div className="flex flex-row"><Sidebar/>
+      <body  className="flex  mx-auto w-full bg-black overflow-x-hidden ">
+
+      {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <div className=" flex flex-row"><Sidebar/>
 <Topbar/>
       </div>}
-<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : "pt-[5%] pl-[5%] flex  w-full h-[100%]" }>
+
+<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : " overflow-x-hidden  pt-[5%] pl-[4%] pr-[5%]  w-full flex   " }>
   {children}
 </div>
 
