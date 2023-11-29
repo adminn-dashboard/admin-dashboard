@@ -12,7 +12,7 @@ const pages = () => {
 <h5 className="text-white text-[28px] font-bold">{inf.number}</h5>
     </div>)}
 </div>
-<img src="/images/video.png" />
+<img src="/images/video.png" className="w-5xl" />
       </div>
       </div>
   )
