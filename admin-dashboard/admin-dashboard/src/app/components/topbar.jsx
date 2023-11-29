@@ -3,7 +3,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 export const Topbar = () => {
   return (
     <div className=" ">
-        <div className="absolute  bg-gray-800 border-[1px] border-gray-300  w-full  h-max  ">
+        <div className="fixed  bg-gray-800 border-[1px] border-gray-300  w-full  h-max  ">
 <div className="flex flex-row items-center justify-between py-[0.5rem] pl-[1rem]">
 <input placeholder="Search" className="rounded-md w-[450px]  h-[45px] bg-gray-500  pl-[0.5rem] text-white placeholder-white"/>
 <div className="flex flex-row items-center justify-center relative right-[25%]  gap-4">
