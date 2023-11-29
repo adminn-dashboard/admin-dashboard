@@ -1,39 +1,22 @@
 'use client';
 import React from 'react';
 import { FirstDashData } from '../Dashboarddata/FirstDashData';
-import { IoSearchOutline } from 'react-icons/io5';
-import { IoMdOptions } from 'react-icons/io';
+import Navigation from './Navigation';
 import DataTable from 'react-data-table-component';
-
+import DashStructure from './DashStructure';
 function PendingApprovalPhotos() {
- 
-  
+ var Data =FirstDashData
+  const title = 'Pending Approval Photos';
        
       return (
-        <div className='mt-10 pb-20'>
-          {' '}
-          <div className='flex justify-between items-center'>
+        <div className='pb-20 mt-10'>
+       <DashStructure 
+            dat={Data}
+            title={title}
+            />
             <div>
-              <h1 className='text-2xl font-semibold'>
-                Pending Approval Shorts
-              </h1>
+              <Navigation />
             </div>
-            <div className='cardbg h-11 rounded-full flex items-center justify-around'>
-              <div>
-                <IoSearchOutline />
-              </div>
-              <input
-                placeholder='Search'
-                className='cardbg h-full'
-              />
-              <div>
-                <IoMdOptions />
-              </div>
-            </div>
-          </div>
-          <div className='mt-5 rounded-lg border-slate-600 border '>
-            
-          </div>
         </div>
       );
 }
