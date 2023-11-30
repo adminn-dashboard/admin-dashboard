@@ -15,7 +15,7 @@ console.log( `/${segment}` )
       {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <div className="fixed flex flex-row "><Sidebar/>
 <Topbar/>
       </div>}
-<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : "  overflow-y-auto pt-[5%] pl-[10%] place-content-center  w-full flex items-center justify-center " }>
+<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : "  overflow-y-auto pt-[5%] pl-[10%] w-full flex  justify-center " }>
   {children}
 </div>
 
