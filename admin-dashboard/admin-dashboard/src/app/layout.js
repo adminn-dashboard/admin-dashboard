@@ -10,13 +10,12 @@ export default function RootLayout({ children }) {
 console.log( `/${segment}` )
   return (
     <html lang="en">
-      <body  className="flex flex-wrap  mx-auto w-full bg-black  overflow-y-auto ">
+      <body  className="flex mx-auto  w-screen bg-black overflow-x-hidden overflow-y-auto ">
 
-      {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <div className="fixed flex flex-row"><Sidebar/>
+      {`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "" : <div className="fixed flex flex-row "><Sidebar/>
 <Topbar/>
       </div>}
-
-<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : " overflow-x-hidden overflow-y-auto pt-[5%] pl-[10%]  w-full flex  justify-center " }>
+<div className={`/${segment}` === "/null" || `/${segment}` === "/forgot-password" ? "flex  w-full h-[100%]" : "  overflow-y-auto pt-[5%] pl-[10%] place-content-center  w-full flex items-center justify-center " }>
   {children}
 </div>
 

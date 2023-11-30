@@ -112,7 +112,7 @@ console.log(segment)
   return (
     <div className= " flex flex-row  " >
       <div className= " border-[1px] border-gray-300">
-      <div className="   flex flex-col w-72 h-max  ">
+      <div className="   flex flex-col w-60 h-max  ">
 <div className="flex flex-col  overflow-y-auto bg-gray-800 gap-4 py-7 pb-4 ">
   <h2 className="text-[34px] font-bold text-blue-500 pl-[1rem] pb-4" >FAME UP</h2>
 {sidebaroptions.map((side) =>(
