@@ -7,6 +7,9 @@ import { IoStatsChartSharp } from "react-icons/io5";
 import { MdOndemandVideo } from "react-icons/md";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { Input } from 'postcss';
+import { IoSettingsSharp } from "react-icons/io5";
+import { CiLogin } from "react-icons/ci";
+
 
 function classNames(...classes) {
 return classes.filter(Boolean).join('')
@@ -21,14 +24,14 @@ const sidebaroptions2 =[
   {
     name : "Settings",
     href : "/settings",
-    icon : <IoStatsChartSharp/>,
+    icon : <IoSettingsSharp/>,
     current : `/${segment}` === "/settings" ? true : false
 },
 {
-    name : "Dashboard",
-    href : "/dashboard",
-    icon : <MdOutlineDashboard />,
-    current :  `/${segment}` === "/dashboard" ? true : false
+    name : "Log out",
+    href : "/logout",
+    icon : < CiLogin />,
+    current :  `/${segment}` === "/logout" ? true : false
 },
 ]
 
@@ -112,11 +115,11 @@ console.log(segment)
   return (
     <div className= " flex flex-row  " >
       <div className= " border-[1px] border-gray-300">
-      <div className="   flex flex-col w-72 h-max  ">
-<div className="flex flex-col  overflow-y-auto bg-gray-800 gap-4 py-7 pb-4 ">
+      <div className="   flex flex-col w-60 h-100  ">
+<div className="flex flex-col  overflow-y-auto bg-[#333333] gap-4 py-7 pb-4 ">
   <h2 className="text-[34px] font-bold text-blue-500 pl-[1rem] pb-4" >FAME UP</h2>
 {sidebaroptions.map((side) =>(
-  <li key={side.name} className="list-none flex flex-col py-[0.5rem]">
+  <li key={side.name} className="list-none flex flex-col py-[0.2rem]">
 <Link href={side.href} className="">
   <div className={classNames(side.current ? "flex flex-row items-center gap-3 pl-[1rem] cursor-pointer text-blue-500 border-l-[4px] border-blue-500 duration-300 ease-in " : "  border-l-[4px] border-transparent duration-300 ease-in  flex flex-row items-center gap-3 pl-[1rem] cursor-pointer text-gray-200")}>
   {side.icon}
@@ -125,6 +128,18 @@ console.log(segment)
 </Link>
   </li>
 ))}
+<div className="pt-4">
+{sidebaroptions2.map((side) =>(
+  <li key={side.name} className="list-none flex flex-col py-[0.2rem]">
+<Link href={side.href} className="">
+  <div className={classNames(side.current ? "flex flex-row items-center gap-3 pl-[1rem] cursor-pointer text-blue-500 border-l-[4px] border-blue-500 duration-300 ease-in " : "  border-l-[4px] border-transparent duration-300 ease-in  flex flex-row items-center gap-3 pl-[1rem] cursor-pointer text-gray-200")}>
+  {side.icon}
+{side.name}
+  </div>
+</Link>
+  </li>
+))}
+</div>
 </div>
 </div>
       </div>
