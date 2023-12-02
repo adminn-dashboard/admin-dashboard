@@ -56,7 +56,7 @@ let link
 
     });
   return (
-    <div className="flex flex-col gap-8  ">
+    <div className="flex flex-col gap-8 items-center justify-center ">
       <div className="flex flex-col gap-6">
 <h2 className="text-white text-[30px] font-bold cursor-pointer">Shorts</h2>
 <div className="flex flex-row gap-12">
@@ -99,7 +99,7 @@ let link
                         {...cell.getCellProps()}
                         style={{ borderBottom: '1px solid #FFFFFF26' }} className="cursor-pointer">
 
-                        <div className=' text-slate-300  justify-center grid m-auto h-16 px-[1rem] items-center cursor-pointer'>
+                        <div className=' text-slate-300  justify-center grid m-auto h-16 px-[1rem] items-center'>
                           {cell.render('Cell')}
                         </div>
                       </td>
