@@ -67,7 +67,7 @@ import Link from "next/link";
     },
     {
       title: 'Self-Defense Compettion',
-      link : "/shorts/selfdefense-competition",
+      link : "/shorts/dancing-competition",
       submitted: (
         <div className='flex items-center gap-2'>
           <div>

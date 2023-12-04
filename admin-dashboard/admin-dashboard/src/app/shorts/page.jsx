@@ -1,20 +1,21 @@
 "use client"
-import React from 'react'
+import React,{useState} from 'react'
 import { info } from './data'
 import { shortsData } from './data'
 import { useTable } from 'react-table';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-
+import { IoSearchOutline } from 'react-icons/io5';
+import { IoMdOptions } from 'react-icons/io';
+import DropDownshort from './widgets/dropdown';
 function pages () {
 const navigate = useRouter
 let link
 {shortsData.map((short) => <div>
   { link = short.link}
+  {console.log(link)}
 </div>)}
-
-
-  const data = React.useMemo(() => shortsData, []);
+const data = React.useMemo(() => shortsData, []);
   const columns = React.useMemo(
     () => [
       {
@@ -40,9 +41,7 @@ let link
       {
         header: '',
         accessor: (row) => (
-
-       <button className=' text-green-600 cursor-pointer ' onClick={()=> navigate("/")}>View more</button>
-
+     <Link href={row.link}> <button className=' text-green-600 cursor-pointer '>View more</button></Link>
           ),
         id: 'dummy',
       },
@@ -53,8 +52,11 @@ let link
     useTable({
       data,
       columns,
-
     });
+    const [dropDown, setDropDown] = useState(false);
+    const dropDownFunc = () => {
+      setDropDown(!dropDown);
+    };
   return (
     <div className="flex flex-col gap-8 items-center justify-center ">
       <div className="flex flex-col gap-6">
@@ -67,11 +69,36 @@ let link
 </div>
 <img src="/images/video.png" className="w-5xl" />
       </div>
-
+<div className="flex flex-col gap-4 relative">
+<div className='flex justify-between items-center'>
+        <div>
+          <h1 className='text-2xl font-semibold text-white'>All Shorts</h1>
+        </div>
+        <div className='cardbg h-11 rounded-full grid items-center '>
+          <div className='grid grid-cols-8 items-center justify-center'>
+            <div className='flex col-span-7 ml-3 gap-2 items-center'>
+              <div className='  h-full grid items-center'>
+                <button>
+                  <IoSearchOutline />
+                </button>
+              </div>
+              <div>
+                <input
+                  placeholder='Search'
+                  className='cardbg h-11'
+                />
+              </div>
+            </div>
+            <button onClick={dropDownFunc}>
+              <IoMdOptions className="" />
+            </button>
+          </div>
+        </div>
+      </div>
       <table
             {...getTableProps()}
             style={{ border: '1px solid #FFFFFF26' }}
-            className='w-full cursor-pointer  '>
+            className='w-full  '>
 
             <thead>
               {headerGroups.map((headerGroup) => (
@@ -97,7 +124,7 @@ let link
                     {row.cells.map((cell) => (
                       <td
                         {...cell.getCellProps()}
-                        style={{ borderBottom: '1px solid #FFFFFF26' }} className="cursor-pointer">
+                        style={{ borderBottom: '1px solid #FFFFFF26' }} >
 
                         <div className=' text-slate-300  justify-center grid m-auto h-16 px-[1rem] items-center'>
                           {cell.render('Cell')}
@@ -109,7 +136,16 @@ let link
               })}
             </tbody>
           </table>
+
+          <div
+        className={`absolute  top-14 right-0 ${
+          dropDown === true ? 'grid' : 'hidden'
+        }`}>
+          <DropDownshort/>
       </div>
+          </div>
+
+    </div>
   )
 }
 
