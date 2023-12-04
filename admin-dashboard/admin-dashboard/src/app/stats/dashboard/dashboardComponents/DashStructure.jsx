@@ -52,9 +52,9 @@ function DashStructure({ dat, title }) {
     setDropDown(!dropDown);
   };
   return (
-    <div className='mt-10 relative'>
+    <div className='mt-10 relative z-0'>
       {' '}
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center '>
         <div>
           <h1 className='text-2xl font-semibold'>{title}</h1>
         </div>
@@ -90,12 +90,12 @@ function DashStructure({ dat, title }) {
             className='w-full  '>
             <thead>
               {headerGroups.map((headerGroup) => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
+                <tr key={headerGroup.id} {...headerGroup.getHeaderGroupProps()}>
                   {headerGroup.headers.map((column) => (
                     <th
                       {...column.getHeaderProps()}
                       style={{ borderBottom: '1px solid #FFFFFF26' }}
-                      className=' cardbg '>
+                      className=' cardbg ' key={column.id}>
                       <div className='grid text-slate-300  m-auto justify-left h-14 items-center'>
                         {column.render('header')}
                       </div>
@@ -108,12 +108,12 @@ function DashStructure({ dat, title }) {
               {rows.map((row) => {
                 prepareRow(row);
                 return (
-                  <tr {...row.getRowProps()}>
+                  <tr key={row.id} {...row.getRowProps()}>
                     {row.cells.map((cell) => (
                       <td
                         {...cell.getCellProps()}
                         style={{ borderBottom: '1px solid #FFFFFF26' }}>
-                        <div className=' text-slate-300  justify-center grid m-auto h-14 items-center'>
+                        <div key={cell.id} className=' text-slate-300  justify-center grid m-auto h-14 items-center'>
                           {cell.render('Cell')}
                         </div>
                       </td>

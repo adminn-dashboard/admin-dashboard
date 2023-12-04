@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import PendingApprovalShorts from './dashboardComponents/PendingApprovalShorts';
 import PendingApprovalPhotos from './dashboardComponents/PendingApprovalPhotos';
@@ -10,7 +10,7 @@ const pages = () => {
           <h1 className='text-2xl font-semibold cursor-pointer'>Main Dashboard</h1>
         </div>
         <div>
-            <PendingApprovalShorts />
+          <PendingApprovalShorts />
         </div>
         <div>
           <PendingApprovalPhotos />
@@ -19,5 +19,4 @@ const pages = () => {
     </div>
   );
 };
-
 export default pages;

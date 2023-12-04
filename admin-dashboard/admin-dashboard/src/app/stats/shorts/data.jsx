@@ -23,7 +23,7 @@ import Link from "next/link";
 
     {
       title: 'Dancing Compettion',
-      link : "/shorts/dancing-competition",
+      link : "/stats/shorts/dancing-competition",
       submitted: (
         <div className='flex items-center gap-2 '>
           <div>
@@ -45,7 +45,7 @@ import Link from "next/link";
     },
     {
       title: 'Yoga Compettion',
-      link : "/shorts/yoga-competition",
+      link : "/stats/shorts/yoga-competition",
       submitted: (
         <div className='flex items-center gap-2'>
           <div>

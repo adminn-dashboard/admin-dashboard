@@ -15,7 +15,7 @@ function PendingApprovalShorts() {
           title={title}
         />
       </div>
-      <div>
+      <div className=''>
         <Navigation />
       </div>
     </div>

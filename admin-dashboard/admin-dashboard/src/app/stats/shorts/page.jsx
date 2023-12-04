@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { IoSearchOutline } from 'react-icons/io5';
 import { IoMdOptions } from 'react-icons/io';
 import DropDownshort from './widgets/dropdown';
+import Image from 'next/image';
 function pages () {
 const navigate = useRouter
 let link
@@ -67,7 +68,13 @@ const data = React.useMemo(() => shortsData, []);
 <h5 className="text-white text-[28px] font-bold">{inf.number}</h5>
     </div>)}
 </div>
-<img src="/images/video.png" className="w-5xl" />
+
+<Image
+          width={1121}
+          height={458}
+          src="/images/video.png"
+          alt="alt"
+        />
       </div>
 <div className="flex flex-col gap-4 relative">
 <div className='flex justify-between items-center'>
