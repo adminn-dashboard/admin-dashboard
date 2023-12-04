@@ -30,7 +30,7 @@ function MainRenders({
           {subtitle}
         </h1>
       </div>
-      <div className='grid justify-center mt-5'>
+      <div className='grid justify-start w-10/12 m-auto mt-5'>
         <Image
           width={1121}
           height={458}
