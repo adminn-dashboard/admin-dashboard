@@ -9,6 +9,7 @@ import { IoSearchOutline } from 'react-icons/io5';
 import { IoMdOptions } from 'react-icons/io';
 import DropDownshort from './widgets/dropdown';
 import Image from 'next/image';
+import { FaPlus } from "react-icons/fa6";
 function pages () {
 const navigate = useRouter
 let link
@@ -81,7 +82,15 @@ const data = React.useMemo(() => shortsData, []);
         <div>
           <h1 className='text-2xl font-semibold text-white'>All Shorts</h1>
         </div>
+<div className="flex flex-row items-center justify-center gap-4">
+
+
+<button className=" py-[0.5rem] text-white bg-[#938BE7] rounded-lg  flex flex-row items-center justify-center pl-4 pr-8" >
+<FaPlus size={25} className=" text-white px-[0.3rem] bg-[rgba(147,139,231,1)] " />
+  <h4 className="text-white font-normal text-[15px] pl-[0.1rem]  bg-[rgba(147,139,231,0.75)]">Add Movie</h4></button>
+
         <div className='cardbg h-11 rounded-full grid items-center '>
+
           <div className='grid grid-cols-8 items-center justify-center'>
             <div className='flex col-span-7 ml-3 gap-2 items-center'>
               <div className='  h-full grid items-center'>
@@ -100,6 +109,7 @@ const data = React.useMemo(() => shortsData, []);
               <IoMdOptions className="" />
             </button>
           </div>
+        </div>
         </div>
       </div>
       <table

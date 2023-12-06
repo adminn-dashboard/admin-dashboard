@@ -1,9 +1,15 @@
 import React from 'react'
 
-const page = () => {
+import Yoga from './component/yoga'
+const pages = () => {
   return (
-    <div className="text-white">yoga</div>
+    <div className=' w-full m-auto grid justify-center'>
+      <div className=''>
+
+      <Yoga />
+      </div>
+    </div>
   )
 }
 
-export default page
+export default pages
