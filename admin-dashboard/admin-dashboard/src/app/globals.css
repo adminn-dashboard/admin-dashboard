@@ -15,5 +15,17 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.bgset{
+  background-color: 
+#191919;
+}
+.cardbg {
+  background-color:#333333 ;}
 
-
+body{
+margin : 0px;
+padding: 0px;
+}
+.pagecolor{
+  background-color: #938BE7;
+}
